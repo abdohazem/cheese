@@ -1,0 +1,124 @@
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+/* .news-container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  animation: scroll 25s infinite linear;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-1083px);
+  }
+} */
+
+.news ul {
+  scroll-behavior: smooth;
+}
+
+.news ul.no-transition {
+  scroll-behavior: auto;
+}
+.news ul.dragging {
+  scroll-behavior: auto;
+}
+.news ul.dragging li {
+  cursor: grab;
+  user-select: none;
+}
+
+.wrapper {
+  /* max-width: 700px; */
+  width: 100%;
+  position: relative;
+}
+.wrapper .carousel {
+  width: 100%;
+  display: flex;
+  grid-auto-flow: column;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* @media (max-width: 768px) {
+  .wrapper {
+    width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+/* @media (min-width: 992px) {
+  .wrapper {
+    width: 100%;
+  }
+} */
+/* @media (min-width: 1200px) {
+  .wrapper {
+    width: 800px;
+  }
+} */
+@media (min-width: 1280px) {
+  .media .baner p {
+    writing-mode: vertical-lr;
+  }
+}
+@media (min-width: 768px) {
+  .provider::before {
+    content: "";
+    width: 20%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    /* transform: translateX(-50%); */
+  }
+}
+
+footer ul li:nth-child(1):after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f095";
+}
+footer ul li:nth-child(2):after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0e0";
+}
+footer ul li:nth-child(3):after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f3c5";
+}
